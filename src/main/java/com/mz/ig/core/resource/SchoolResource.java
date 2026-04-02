@@ -16,35 +16,26 @@ import com.mz.ig.core.auth.AbstractResource;
 import com.mz.ig.core.entity.SchoolEntity;
 import com.mz.ig.core.service.ISchoolService;
 
-
-
 @RestController
 @RequestMapping("/schools")
-public class SchoolResource extends AbstractResource  {
-	
+public class SchoolResource extends AbstractResource {
+
 	@Autowired
 	private ISchoolService schoolService;
-	
+
 	@GetMapping("/all")
 	public List<SchoolEntity> findAll() {
 		return this.schoolService.findAll();
 	}
-	
+
 	@PostMapping("/create")
 	public SchoolEntity createSchool(@RequestBody SchoolEntity school) {
 		return this.schoolService.createSchool(getUserContext(), school);
 	}
 
-        
-        @PutMapping("/update/id/{id}")
-        public SchoolEntity updateSchoolById(@PathVariable Long id, @RequestBody SchoolEntity school) {
-                return this.schoolService.updateSchoolById(getUserContext(), id,  school);
-        }
-
-
-        @DeleteMapping("/delete/id/{id}")
-        public void deleteSchoolById(@PathVariable Long id) {
-                 this.schoolService.deleteSchoolById(getUserContext(), id);
-        }
+	@PutMapping("/update/id/{id}")
+	public SchoolEntity updateSchoolById(@PathVariable Long id, @RequestBody SchoolEntity school) {
+		return this.schoolService.updateSchoolById(getUserContext(), id, school);
+	}
 
 }

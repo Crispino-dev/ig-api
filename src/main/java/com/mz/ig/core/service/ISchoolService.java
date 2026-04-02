@@ -16,6 +16,5 @@ public interface ISchoolService {
 
         public SchoolEntity updateSchoolById(UserEntity loggedUser, Long id, SchoolEntity school);
 
-        public void deleteSchoolById(UserEntity loggedUser, Long id);
 
 }

@@ -41,14 +41,7 @@ public class SchoolServiceImpl implements ISchoolService {
                      return this.schoolRepository.save(updatedSchool);
         }
 
-     @Override
-      public void deleteSchoolById(UserEntity loggedUser, Long id){
-      if(!this.schoolRepository.existsById(id){
-          throw new ResourceNotFoundException("School not found");
-     }
-        schoolRepository.deleteById(id);
-     }
-
+   
 
 
 }

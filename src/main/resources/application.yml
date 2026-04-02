@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/db_ig
+    url: jdbc:postgresql://localhost:5430/db_ig
     username: postgres
     password: terceiroano
     driver-class-name: org.postgresql.Driver
